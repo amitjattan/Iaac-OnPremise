@@ -29,25 +29,4 @@ Vagrant.configure("2") do |config|
 	 ansible-playbook /vagrant/ansible/apache.yml
       SHELL
     end
-	config.vm.define "mysql" do |virtualbox|
-      virtualbox.vm.hostname = "mysql"
-      virtualbox.vm.box = "ubuntu1604"
-	  virtualbox.ssh.username = "vagrant"
-	  virtualbox.ssh.password = "vagrant"
-      virtualbox.vm.network :private_network, ip: "192.168.2.12"
-  
-      config.vm.provider :virtualbox do |v|
-        v.gui = false
-        v.memory = 512
-        v.cpus = 1
-        v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
-        v.customize ["modifyvm", :id, "--ioapic", "on"]
-      end
-     #
-     # Run Ansible from the Vagrant Host
-     #
-      config.vm.provision "shell", inline: <<-SHELL
-	 ansible-playbook /vagrant/ansible/mysql.yml
-      SHELL
-    end
 end
