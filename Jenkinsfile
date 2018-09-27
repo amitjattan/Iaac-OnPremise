@@ -15,7 +15,5 @@ node {
     echo " - - - - Ready to execute Vagrant now - - - - "
     cmd vagrant up
     echo " - - - - - - C O M P L E T E D - - - - - - - "
-    
-    '''
     }
 }
