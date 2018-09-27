@@ -13,7 +13,7 @@ node {
     stage ('Vagrant') {
     
     echo " - - - - Ready to execute Vagrant now - - - - "
-    cd "C:\Program Files\Git"
+    cd "C:/Program Files/Git"
     .\git-bash.exe sh '''
    {
     while read -r line
