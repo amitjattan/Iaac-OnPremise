@@ -13,7 +13,8 @@ node {
     stage ('Vagrant') {
     
     echo " - - - - Ready to execute Vagrant now - - - - "
-    sh '''
+    cd "C:\Program Files\Git"
+    .\git-bash.exe sh '''
    {
     while read -r line
     do
@@ -27,15 +28,15 @@ node {
       removeInfra=$(echo "$line" |awk -F "," '{ print $8 }')
 	
 	if [ "$infra" = "Y" ];then
-  vagrant up
+  E:\Users\amitk.kmr\.jenkins\workspace\OnPremiseEnviromentProvisioning\vagrant up
 		fi
 	removeInfra=$(echo "$line" |awk -F "," '{ if ($5=="N") print $10; }')
 	echo "$removeInfra"
 	if [ "$removeInfra" = "Y" ]; then
-  vagrant destroy
+  E:\Users\amitk.kmr\.jenkins\workspace\OnPremiseEnviromentProvisioning\vagrant destroy
 	fi
     done
-    } < ./../../config.csv
+    } < E:\Users\amitk.kmr\.jenkins\workspace\OnPremiseEnviromentProvisioning\config.csv
     echo " - - - - - - C O M P L E T E D - - - - - - - "
     
     '''
