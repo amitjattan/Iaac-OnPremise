@@ -13,7 +13,7 @@ node {
     stage ('Vagrant') {
     
     echo " - - - - Ready to execute Vagrant now - - - - "
-    cmd 'vagrant up'
+    bat 'vagrant up'
     echo " - - - - - - C O M P L E T E D - - - - - - - "
     }
 }
