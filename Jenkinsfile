@@ -13,8 +13,7 @@ node {
     stage ('Vagrant') {
     
     echo " - - - - Ready to execute Vagrant now - - - - "
-    cd "C:/Program Files/Git"
-    ./git-bash.exe sh '''
+    cmd vagrant up
     echo " - - - - - - C O M P L E T E D - - - - - - - "
     
     '''
