@@ -15,7 +15,7 @@ node {
     echo " - - - - Ready to execute Vagrant now - - - - "
     cd "C:/Program Files/Git"
     ./git-bash.exe sh '''
-	  cd "E:/Users/amitk.kmr/.jenkins/workspace/OnPremiseEnviromentProvisioning"
+	  cd E:/Users/amitk.kmr/.jenkins/workspace/OnPremiseEnviromentProvisioning
    {
     while read -r line
     do
