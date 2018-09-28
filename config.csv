@@ -1,2 +1,2 @@
 Platform,Version,ImageOnArtifactory,allowed_port,Image,Infra,Environment,RemoveInfra
-apache,1,N,80,N,N,DEV,N
+apache,1,N,80,N,Y,DEV,N
